@@ -6,6 +6,9 @@
 3. run `npm start` 
 4. You will be able to see the output on http://localhost:3000/
 
+## OR
+You can see the project live on https://thirsty-ptolemy-44820f.netlify.app/
+
 ## Technology used:
 ### Main:
 - Create-React-App
