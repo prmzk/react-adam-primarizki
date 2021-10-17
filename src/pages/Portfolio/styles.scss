@@ -1,0 +1,113 @@
+$port-dark: #312728;
+$port-darker: #362a2e;
+$port-red: #f37b83;
+$port-light: #daabbb;
+
+.portfolio {
+    // OFFSET HEADER
+    padding-top: 55px; 
+    padding-bottom: 100px;
+    min-height: 130vh;
+
+    background-color: $port-dark;
+
+    & p, div {
+        color: $port-light;
+    }
+
+    & h1, h2, h3 {
+        color: $port-red;
+    }
+
+    & > .container {
+        padding-top: 40px;
+    }
+
+    & .image {
+        & img {
+            max-width: 100%;
+        }
+    }
+    
+    & .icon-card {
+        background: $port-darker;
+        width: 240px;
+        height: 240px;
+        margin: 0 12px 12px 0;
+        & h2 {
+            color: $port-red;
+        }
+        & p {
+            font-size: 12px;
+        }
+    }
+
+    & .services {
+        & h2 {
+            color: $port-red;
+        }
+        & h4 {
+            font-size: 16px;
+            line-height: 1.5em;
+        }
+        & p {
+            font-size: 12px;
+            letter-spacing: 1.05px;
+            font-weight: 300;
+            line-height: 1.5em;
+        }
+        & .btn {
+            background: transparent;
+            border: solid 2px $port-red;
+            border-radius: 32px; 
+            font-size: 12px;
+        }
+    }
+
+    & .skill-diagram-wrapper {
+        & > .skill-diagram {
+            overflow: visible;
+            width: 200px;
+            & div {
+                overflow: visible;
+            }
+            & svg {
+                overflow: visible;
+            }
+            & .percentage {
+                color: $port-red;
+                font-size: 40px;
+                font-weight: 700;
+            }
+        }
+        & p {
+            color: $port-red;
+        }
+    }
+
+    & .skill-bar {
+        & .progress-skill-bar-wrapper { 
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(180deg, transparent 25%, #daabbb5d 25%, #daabbb5d 75%, transparent 75%);
+            & > .progress-skill-bar {
+                height: 100%;
+                transition: width 1s ease;
+                background-color: $port-red;
+            }
+        }
+        
+        & .percentage {
+            color: #daabbb5d;
+            font-size: 40px;
+            font-weight: 700;
+            width: 100px;
+            display: inline-block;
+            @media (max-width: 992px) {
+                font-size: 20px;
+                width: 50px;
+            }
+        }
+    }
+
+}

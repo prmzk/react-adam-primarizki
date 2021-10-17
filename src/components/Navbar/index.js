@@ -61,19 +61,19 @@ const MyNavbar = () => {
                     >
                         <div className='dropdown-container'>
                             <Row className='w-100'>
-                                <Col xl={4}>
+                                <Col xl={4} lg={4}>
                                     <p>Grid Minimal</p>
                                     <ul>
                                         {['2 columns', '3 columns', '4 columns', 'Full Width'].map((el, i) => <li className='mb-2' key={i}><Link to="/portfolio">{el}</Link></li>)}
                                     </ul>
                                 </Col>
-                                <Col xl={4}>
+                                <Col xl={4} lg={4}>
                                     <p>Masonry Minimal</p>
                                     <ul>
                                         {['2 columns', '3 columns', '4 columns', 'Full Width'].map((el, i) => <li className='mb-2' key={i}><Link to="/portfolio">{el}</Link></li>)}
                                     </ul>
                                 </Col>
-                                <Col xl={4}>
+                                <Col xl={4} lg={4}>
                                     <p>Grid detailed</p>
                                     <ul>
                                         {['2 columns', '3 columns', '4 columns', 'Full Width'].map((el, i) => <li className='mb-2' key={i}><Link to="/portfolio">{el}</Link></li>)}
