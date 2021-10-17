@@ -1,0 +1,66 @@
+.right-menu {
+    position: fixed;
+    right: 0;
+    top: 200px;
+    z-index: 1030;
+
+    overflow: hidden;
+
+    &__menus {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        & > .icons {
+            padding: 12px 16px;
+            border-bottom: 1px solid gray;
+            cursor: pointer;
+            background: rgb(242, 241, 241);
+            transition: filter 0.2s ease;
+    
+            &:hover {
+                filter: brightness(0.92);
+                & path {
+                    fill:rgb(35, 158, 5);
+                }
+            }
+        }
+
+        & > .hover-text {
+            display: none;
+            border-radius: 20px;
+            background: rgb(242, 241, 241);
+            color: rgb(35, 158, 5);
+        }
+
+        & > .arrow-right {
+            display: none;
+            fill: rgb(242, 241, 241);
+            margin-left: -8px;
+        }
+
+        &:hover {
+            & > .hover-text {
+                display: flex;
+            }
+    
+            & > .arrow-right {
+                display: flex;
+            }
+        }
+    }
+    & .selected {
+        & > .icons {
+            filter: brightness(0.95);
+            & path {
+                fill:rgb(35, 158, 5)
+            }
+        }
+    }
+    & > div:last-child > .icons {
+        border-bottom: none;
+        border-radius: 0 0 0 10px;
+    }
+    & > div:first-child > .icons {
+        border-radius: 10px 0 0 0;
+    }
+}

@@ -2,6 +2,7 @@ import { createBrowserHistory } from "history";
 import { useEffect } from "react";
 import { Route, Router, Switch, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import RightMenu from "../components/RightMenu";
 import NotFound from "./NotFound";
 import routes from "./routes";
 
@@ -17,6 +18,7 @@ function App() {
         <Router history={history}>
             <ScrollToTop />
             <Navbar />
+            <RightMenu/>
             <Switch>
                 {routes.map((route, idx) => {
                 return route.component ? (
