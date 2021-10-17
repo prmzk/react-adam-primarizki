@@ -1,0 +1,32 @@
+.demo {
+    // OFFSET HEADER
+    padding-top: 55px; 
+    min-height: 130vh;
+    & .banner {
+        padding-top: 100px;
+        @media (max-width: 992px) {
+            min-height: 400px;
+        }
+
+        //IMAGE SOURCE: UNSPLASH
+        background-image: url('../../assets/images/demo-bg.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        & .btn {
+            border-radius: 2rem;
+        }
+    }
+
+    & .waves {
+        margin-top: 200px;
+        background-image: url('../../assets/images/waves.webp');
+        background-size: contain;
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+        height: 10vw;
+        width: 100%;
+    }
+}
+

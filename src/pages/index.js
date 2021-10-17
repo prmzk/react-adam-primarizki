@@ -1,17 +1,32 @@
+import { createBrowserHistory } from "history";
+import { useEffect } from "react";
+import { Route, Router, Switch, useLocation } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import NotFound from "./NotFound";
+import routes from "./routes";
 
-function App() {
-  return (
-    <div>
-      <div>asd</div>
-      <h1>asd</h1>
-      <h2>asd</h2>
-      <h3>asd</h3>
-      <h4>asd</h4>
-      <h5>asd</h5>
-      <a>asd</a>
-      <p>asd</p>
-    </div>
-  )
+function ScrollToTop() {
+    useEffect(() => window.scrollTo(0, 0), [useLocation().pathname]);
+    return null
 }
 
-export default App;
+const history = createBrowserHistory();
+
+function App() {
+    return (
+        <Router history={history}>
+            <ScrollToTop />
+            <Navbar />
+            <Switch>
+                {routes.map((route, idx) => {
+                return route.component ? (
+                    <Route path={route.path} component={route.component} exact key={idx}/>
+                ) : (null);
+                })}
+                <Route component={NotFound} />
+            </Switch>
+        </Router>
+    )
+}
+
+export default App

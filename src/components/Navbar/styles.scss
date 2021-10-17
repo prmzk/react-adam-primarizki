@@ -1,0 +1,71 @@
+.my-navbar {
+    box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04), 0px 2px 4px rgba(96, 97, 112, 0.16);
+    z-index: 1030;
+
+    .container-desktop {
+        @media (max-width: 992px) {
+           display: none;
+        }
+    }
+
+    .container-mobile {
+        display: none;
+        @media (max-width: 992px) {
+           display: flex;
+        }
+    }
+
+    & .dropdown {
+        position: unset;
+        left: 0;
+    }
+
+    & .dropdown-menu {
+        -webkit-transition: padding-top 0.2s ease;
+        -moz-transition: padding-top 0.2s ease;
+        -ms-transition: padding-top 0.2s ease;
+        -o-transition: padding-top 0.2s ease;
+        transition: padding-top 0.2s ease;
+        
+        border: none;
+        padding: 0;
+        max-height: 0;
+        display: block;
+        overflow: hidden;
+        z-index: -1;
+        left: 0px !important;
+        top: 54px;
+       
+        width: 100vw;
+    }
+    & .dropdown.show .dropdown-menu { /* For Bootstrap 4, use .dropdown.show instead of .dropdown.open */
+        max-height: unset;
+        opacity: 1;
+        left: 0px !important;
+        padding: 8px;
+        padding-top: 24px;
+        box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04), 0px 2px 4px rgba(96, 97, 112, 0.16);
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    & .dropdown-container {
+        width: 960px;
+        max-width: 100%;
+        & p {
+            color: var(--bs-blue);
+        }
+        & a {
+            color: black;
+        }
+    }
+
+    & .nav-item, & .nav-link {
+        font-weight: 600;
+    }
+
+    & .nav-search {
+        width: unset;
+    }
+}
