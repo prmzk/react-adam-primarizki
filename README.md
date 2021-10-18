@@ -1,4 +1,4 @@
-# Adam Primarizki ALAMI Front End Test
+# Adam Primarizki Front End Test
 
 ## How to run the project:
 1. Clone this project on your machine OR unpack the ZIP file sent by me.
